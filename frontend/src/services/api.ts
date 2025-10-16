@@ -19,14 +19,17 @@ export interface City {
   name: string;
 }
 
+const baseURL = import.meta.env.VITE_API_URL || 'http://localhost:3333';
 
 const apiClient = axios.create({
-  baseURL: 'http://localhost:3333',
+  baseURL: baseURL,
 });
+
+console.log(`API Base URL: ${baseURL}`); 
 
 export async function fetchWeather(
   cityName: string,
-  stateUf: string, 
+  stateUf: string,
   unit: TemperatureUnit
 ): Promise<WeatherResponse> {
   const encodedCity = encodeURIComponent(cityName);
