@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "tsx watch src/infra/http/server.ts",
     "build": "tsc",
-    "start": "node ./dist/infra/http/server.js",
+    "start": "node dist/infra/http/server.js",
     "test": "vitest",
     "db:seed": "tsx src/infra/database/seed.ts",
     "db:map-ids": "tsx src/infra/database/map_ids.ts"
