@@ -1,0 +1,36 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/infra/http/server.ts",
+    "test": "vitest",
+    "db:seed": "tsx src/infra/database/seed.ts",
+    "db:map-ids": "tsx src/infra/database/map_ids.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@fastify/cors": "^11.1.0",
+    "axios": "^1.12.2",
+    "cheerio": "^1.1.2",
+    "dotenv": "^17.2.3",
+    "fastify": "^5.6.1",
+    "pg": "^8.16.3",
+    "string-similarity": "^4.0.4",
+    "xml2js": "^0.6.2",
+    "yup": "^1.7.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.7.2",
+    "@types/pg": "^8.15.5",
+    "@types/string-similarity": "^4.0.2",
+    "@types/xml2js": "^0.4.14",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  }
+}
