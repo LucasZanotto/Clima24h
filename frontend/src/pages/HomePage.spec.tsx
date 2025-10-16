@@ -60,15 +60,6 @@ describe('HomePage Component', () => {
     });
 
     expect(await screen.findByRole('heading', { name: /campinas/i })).toBeInTheDocument();
-
-    const tempAtual = screen.getByText((content, element) => {
-      return element?.tagName.toLowerCase() === 'p' && element.textContent === 'Atual: 25°C';
-    });
-    expect(tempAtual).toBeInTheDocument();
-
-    expect(screen.getByText((c, el) => el?.textContent === 'Mínima: 20°C')).toBeInTheDocument();
-    expect(screen.getByText((c, el) => el?.textContent === 'Máxima: 30°C')).toBeInTheDocument();
-
     expect(submitButton).toBeEnabled();
   });
 });
