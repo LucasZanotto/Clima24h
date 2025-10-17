@@ -25,5 +25,6 @@
     "strict": true
   },
   "include": ["src/**/*"],
+  "types": ["node"],
   "exclude": ["**/*.spec.ts", "vitest.setup.ts", "node_modules"]
 }
