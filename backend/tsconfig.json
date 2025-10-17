@@ -1,25 +1,30 @@
 {
   "compilerOptions": {
-    "target": "ES2023",
     "module": "nodenext",
     "moduleResolution": "nodenext",
-    "rootDir": "./",
-    "outDir": "./dist",
-    "strict": true,
-    "esModuleInterop": true,
     "resolvePackageJsonExports": true,
-    "allowSyntheticDefaultImports": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "types": ["node"],
-
-    "declaration": true,
-    "sourceMap": true,
-    "incremental": true,
-    "removeComments": true,
+    "esModuleInterop": true,
     "isolatedModules": true,
+    "declaration": true,
+    "removeComments": true,
     "emitDecoratorMetadata": true,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "baseUrl": "./",
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "noFallthroughCasesInSwitch": false,
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "target": "ES2023",
+    "strict": true
   },
-  "include": ["src/**/*", "vitest.setup.ts"]
+  "include": ["src/**/*"],
+  "types": ["node"],
+  "exclude": ["**/*.spec.ts", "vitest.setup.ts", "node_modules"]
 }
