@@ -15,7 +15,7 @@ const app = fastify({
 });
 
 app.register(cors, {
-  origin: ['https://clima24h.onrender.com'],
+  origin: true, 
 });
 
 const locationRepository = new LocationRepository();
