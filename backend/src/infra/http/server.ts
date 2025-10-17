@@ -15,7 +15,7 @@ const app = fastify({
 });
 
 app.register(cors, {
-  origin: true, 
+  origin: ['https://clima24h.onrender.com'],
 });
 
 const locationRepository = new LocationRepository();
@@ -40,7 +40,9 @@ app.register((app, _, done) => {
 
 const start = async () => {
   try {
-    await app.listen({ port: 3333, host: '0.0.0.0' });
+    const port = Number(process.env.PORT) || 3333;
+    await app.listen({ port, host: '0.0.0.0' });
+    app.log.info(`Server running on port ${port}`);
   } catch (err) {
     app.log.error(err);
     process.exit(1);
